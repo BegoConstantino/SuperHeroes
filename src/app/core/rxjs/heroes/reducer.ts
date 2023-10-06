@@ -1,5 +1,5 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import { setList } from './actions';
+import { setDetail, setList } from './actions';
 import { State, initialState } from './state';
 
 export const Reducer = createReducer(
@@ -9,6 +9,13 @@ export const Reducer = createReducer(
 		(state: State, data): State => ({
 			...state,
 			list: data.value,
+		}),
+	),
+	on(
+		setDetail,
+		(state: State, data): State => ({
+			...state,
+			detail: data.value,
 		}),
 	),
 );
