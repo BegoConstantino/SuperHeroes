@@ -1,0 +1,12 @@
+# Ignore artifacts:
+dist
+node_modules
+e2e
+.angular
+.vscode
+.husky
+
+# Ignore files:
+
+package-lock.json
+index.html
