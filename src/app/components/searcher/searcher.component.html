@@ -1,1 +1,4 @@
-<input [(ngModel)]="heroName" appUppercase />
+<mat-form-field>
+	<mat-label>Search your Hero</mat-label>
+	<input [formControl]="searchForm" matInput appUppercase />
+</mat-form-field>

@@ -43,7 +43,12 @@ export class HeroesService {
 	}
 
 	getSuperHeroesByName(keyword: string) {
-		const newList: SuperHero[] = this.superheroes.filter((hero) => hero.name.toLowerCase().includes(keyword.toLowerCase()));
+		const newList: SuperHero[] =
+			!keyword || keyword.length < 3
+				? this.superheroes
+				: this.superheroes.filter(
+						(hero) => hero.name.toUpperCase().includes(keyword.toUpperCase()) || hero.heroName.toUpperCase().includes(keyword.toUpperCase()),
+				  );
 		this.store.dispatch(HeroesActions.setList({ value: newList }));
 	}
 
