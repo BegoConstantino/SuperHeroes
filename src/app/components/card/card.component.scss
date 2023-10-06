@@ -5,6 +5,7 @@
 		padding-bottom: $spacer;
 		margin-bottom: $spacer;
 		position: relative;
+		cursor: pointer;
 		&:after {
 			content: "";
 			display: block;

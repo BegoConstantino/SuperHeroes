@@ -1,10 +1,12 @@
-export interface SuperHero {
+export interface SuperHero extends NewSuperHero {
 	id: number;
+	creationDate: Date;
+}
+
+export interface NewSuperHero {
 	name: string;
 	heroName: string;
-	isActive: boolean;
 	powers: string[];
 	level: number;
-	creationDate: Date;
 	description: string;
 }

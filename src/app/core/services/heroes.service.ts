@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { SuperHero } from '@core/models';
+import { Router } from '@angular/router';
+import { NewSuperHero, SuperHero } from '@core/models';
 import { HeroesActions, LoadingActions } from '@core/rxjs';
 import { Store } from '@ngrx/store';
+import { MainRoutes } from '@shared/constants';
 import { Observable, catchError, filter, map, of, tap, throwError } from 'rxjs';
 
 @Injectable({
@@ -13,6 +15,7 @@ export class HeroesService {
 	constructor(
 		private readonly store: Store,
 		private readonly http: HttpClient,
+		private router: Router,
 	) {}
 
 	getAllSuperHeroes(): void {
@@ -29,17 +32,12 @@ export class HeroesService {
 			.subscribe();
 	}
 
-	getSuperHeroById(id: number): Observable<SuperHero> {
-		return of(this.superheroes.find((hero) => hero.id === id)).pipe(
-			map((hero) => {
-				if (hero) {
-					return hero; // Retorna el héroe si se encuentra
-				} else {
-					throw new Error(`No se encontró ningún superhéroe con el ID ${id}`);
-				}
-			}),
-			catchError((error) => throwError(error)),
-		);
+	getSuperHeroById(id: number) {
+		if(!this.superheroes) {
+			this.router.navigate([MainRoutes.LIST]);
+			return;
+		}
+		return this.superheroes.find((hero) => hero.id === id);
 	}
 
 	getSuperHeroesByName(keyword: string) {
@@ -63,8 +61,27 @@ export class HeroesService {
 	deleteSuperHero(id: number) {
 		const index = this.superheroes.findIndex((h) => h.id === id);
 		if (index !== -1) {
-			this.superheroes.splice(index, 1);
+			this.superheroes = [...this.superheroes.slice(0, index), ...this.superheroes.slice(index + 1)];
 			this.store.dispatch(HeroesActions.setList({ value: this.superheroes }));
 		}
+	}
+
+	addSuperHero(values: NewSuperHero) {
+		const newSuperHero: SuperHero = {
+			...values,
+			id: this.getNewId(),
+			creationDate: new Date(),
+		};
+		this.superheroes.push(newSuperHero);
+		this.store.dispatch(HeroesActions.setList({ value: this.superheroes }));
+	}
+
+	private getNewId() {
+		if (this.superheroes.length === 0) {
+			return 1;
+		}
+		return this.superheroes.reduce((maxId, hero) => {
+			return hero.id > maxId ? hero.id : maxId;
+		}, this.superheroes[1].id);
 	}
 }

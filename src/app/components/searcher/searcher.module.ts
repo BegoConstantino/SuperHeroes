@@ -8,7 +8,7 @@ import { UppercaseDirective } from '@shared/directives/uppercase.directive';
 
 @NgModule({
 	declarations: [SearcherComponent, UppercaseDirective],
-	imports: [CommonModule, ReactiveFormsModule, FormsModule, MatInputModule, MatFormFieldModule, FormsModule],
+	imports: [CommonModule, ReactiveFormsModule, FormsModule, MatInputModule, MatFormFieldModule],
 	exports: [SearcherComponent],
 })
 export class SearcherModule {}

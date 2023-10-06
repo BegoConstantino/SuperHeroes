@@ -9,7 +9,7 @@ import { HeroesService } from '@core/services/heroes.service';
 	styleUrls: ['./detail.component.scss'],
 })
 export class DetailComponent implements OnInit {
-	hero!: SuperHero;
+	hero?: SuperHero;
 
 	constructor(
 		private router: Router,
@@ -20,12 +20,7 @@ export class DetailComponent implements OnInit {
 	ngOnInit(): void {
 		const routeId = this.route.snapshot.paramMap.get('id');
 		if (routeId) {
-			this.heroesService.getSuperHeroById(Number(routeId)).subscribe({
-				next: (result) => {
-					this.hero = result;
-				},
-				error: () => {},
-			});
+			this.hero = this.heroesService.getSuperHeroById(Number(routeId));
 		}
 	}
 }
