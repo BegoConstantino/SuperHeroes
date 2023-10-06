@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ErrorComponent } from './error.component';
+import { SearcherComponent } from './searcher.component';
 
 
 
 @NgModule({
-  declarations: [
-    ErrorComponent
-  ],
+  declarations: [SearcherComponent],
   imports: [
     CommonModule
   ]
 })
-export class ErrorModule { }
+export class SearcherModule { }

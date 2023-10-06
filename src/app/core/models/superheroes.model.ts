@@ -6,5 +6,5 @@ export interface SuperHero {
 	powers: string[];
 	level: number;
 	creationDate: Date;
-	picture: string;
+	description: string;
 }

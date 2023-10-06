@@ -1,9 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { SuperHero } from '@core/models';
-import { Observable, filter, of, tap } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HeroesActions, LoadingActions } from '@core/rxjs';
 import { Store } from '@ngrx/store';
-import { HeroesActions, HeroesSelectors, LoadingActions } from '@core/rxjs';
+import { Observable, catchError, filter, map, of, tap, throwError } from 'rxjs';
 
 @Injectable({
 	providedIn: 'root',
@@ -29,8 +29,17 @@ export class HeroesService {
 			.subscribe();
 	}
 
-	getSuperHeroById(id: number): Observable<SuperHero | undefined> {
-		return of(this.superheroes.find((hero) => hero.id === id));
+	getSuperHeroById(id: number): Observable<SuperHero> {
+		return of(this.superheroes.find((hero) => hero.id === id)).pipe(
+			map((hero) => {
+				if (hero) {
+					return hero; // Retorna el héroe si se encuentra
+				} else {
+					throw new Error(`No se encontró ningún superhéroe con el ID ${id}`);
+				}
+			}),
+			catchError((error) => throwError(error)),
+		);
 	}
 
 	getSuperHeroesByName(keyword: string) {

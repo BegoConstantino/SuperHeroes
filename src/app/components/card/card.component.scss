@@ -1,0 +1,49 @@
+@import "vars.scss";
+::ng-deep.mdc-card {
+	height: 100%;
+	.mat-mdc-card-header {
+		padding-bottom: $spacer;
+		margin-bottom: $spacer;
+		position: relative;
+		&:after {
+			content: "";
+			display: block;
+			width: 80%;
+			height: 2px;
+			position: absolute;
+			bottom: 0;
+			background-color: $main;
+		}
+	}
+	.mat-mdc-card-title {
+		color: $main;
+	}
+	.mdc-card__actions {
+		margin-top: auto;
+		button + button {
+			margin-left: $spacer;
+		}
+	}
+}
+.text {
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	position: relative;
+}
+
+.chips {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	font-size: $font-m1;
+	margin: 0 -5px;
+	li {
+		border-radius: 16px;
+		background-color: $grey;
+		padding: 2px 10px;
+		margin: 5px;
+	}
+}

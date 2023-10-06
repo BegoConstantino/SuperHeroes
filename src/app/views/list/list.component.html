@@ -1,6 +1,9 @@
-<ul class="row" *ngIf="heroesList$ | async as heroesList">
-	<li class="col-12 col-xl-3" *ngFor="let hero of heroesList">
-		<h2>{{ hero.name }}</h2>
-		<p>{{ hero.heroName }}</p>
-	</li>
-</ul>
+<ng-container *ngIf="heroesList$ | async as heroesList">
+	<ul class="row">
+		<li class="col-12 col-xl-4 mb-2" *ngFor="let hero of heroesList.slice(currentPage * pageSize, (currentPage + 1) * pageSize)">
+			<app-card [hero]="hero"></app-card>
+		</li>
+	</ul>
+
+	<mat-paginator [length]="heroesList.length" [pageSize]="pageSize" (page)="changePage($event.pageIndex)"></mat-paginator>
+</ng-container>

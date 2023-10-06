@@ -1,0 +1,16 @@
+<mat-card>
+	<mat-card-header>
+		<mat-card-title>{{ hero.heroName }}</mat-card-title>
+		<mat-card-subtitle>{{ hero.name }}</mat-card-subtitle>
+	</mat-card-header>
+	<mat-card-content>
+		<p class="text">{{ hero.description }}</p>
+		<ul class="chips">
+			<li *ngFor="let power of hero.powers">{{ power }}</li>
+		</ul>
+	</mat-card-content>
+	<mat-card-actions align="end">
+		<button mat-raised-button>Delete</button>
+		<button mat-raised-button>Edit</button>
+	</mat-card-actions>
+</mat-card>

@@ -1,29 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainRoutes } from '@shared/constants';
-import { ErrorComponent } from '@views/error/error.component';
+import { DetailComponent } from '@views/detail/detail.component';
+import { FormComponent } from '@views/form/form.component';
+import { ListComponent } from '@views/list/list.component';
 
 const routes: Routes = [
 	{
 		path: MainRoutes.LIST,
-		loadChildren: () => import('./views/list/list.module').then((m) => m.ListModule),
+		component: ListComponent,
 	},
 	{
-		path: MainRoutes.DETAIL,
-		loadChildren: () => import('./views/detail/detail.module').then((m) => m.DetailModule),
+		path: MainRoutes.DETAIL + '/:id',
+		component: DetailComponent,
 	},
 	{
 		path: MainRoutes.FORM,
-		loadChildren: () => import('./views/form/form.module').then((m) => m.FormModule),
+		component: FormComponent,
 	},
-	{ path: MainRoutes.ERROR, component: ErrorComponent },
 	{ path: '', redirectTo: MainRoutes.LIST, pathMatch: 'full' },
-	{ path: '**', redirectTo: MainRoutes.ERROR, pathMatch: 'full' }
+	{ path: '**', redirectTo: MainRoutes.LIST, pathMatch: 'full' },
 ];
 
-
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+	imports: [RouterModule.forRoot(routes)],
+	exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
