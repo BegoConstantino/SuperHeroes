@@ -1,1 +1,6 @@
-<p>list works!</p>
+<ul class="row" *ngIf="heroesList$ | async as heroesList">
+	<li class="col-12 col-xl-3" *ngFor="let hero of heroesList">
+		<h2>{{ hero.name }}</h2>
+		<p>{{ hero.heroName }}</p>
+	</li>
+</ul>

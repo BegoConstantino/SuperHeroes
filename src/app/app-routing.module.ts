@@ -5,10 +5,6 @@ import { ErrorComponent } from '@views/error/error.component';
 
 const routes: Routes = [
 	{
-		path: MainRoutes.HOME,
-		loadChildren: () => import('./views/home/home.module').then((m) => m.HomeModule),
-	},
-	{
 		path: MainRoutes.LIST,
 		loadChildren: () => import('./views/list/list.module').then((m) => m.ListModule),
 	},
@@ -21,8 +17,8 @@ const routes: Routes = [
 		loadChildren: () => import('./views/form/form.module').then((m) => m.FormModule),
 	},
 	{ path: MainRoutes.ERROR, component: ErrorComponent },
-	{ path: '', redirectTo: MainRoutes.HOME, pathMatch: 'full' },
-	{ path: '**', redirectTo: MainRoutes.HOME, pathMatch: 'full' }
+	{ path: '', redirectTo: MainRoutes.LIST, pathMatch: 'full' },
+	{ path: '**', redirectTo: MainRoutes.ERROR, pathMatch: 'full' }
 ];
 
 

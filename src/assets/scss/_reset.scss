@@ -1,0 +1,84 @@
+@import "vars";
+html,
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+	font-size: inherit;
+	font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0;
+	margin: 0;
+	font-weight: $regular;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+	font-weight: $light;
+}
+b {
+	font-weight: $regular;
+}
+
+a,
+button {
+	border: none;
+	background-color: inherit;
+	color: inherit;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+button[disabled]:hover {
+	cursor: not-allowed;
+}
+button {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+img,
+svg {
+	max-width: 100%;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 30px white inset !important;
+	box-shadow: 0 0 0 30px white inset !important;
+}
+
+dd,
+dl,
+dt {
+	margin: 0;
+}

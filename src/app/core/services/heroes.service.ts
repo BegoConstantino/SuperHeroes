@@ -13,40 +13,44 @@ export class HeroesService {
 	constructor(
 		private readonly store: Store,
 		private readonly http: HttpClient,
-	) {
-		this.store.select(HeroesSelectors.getList).subscribe((data) => (this.superheroes = data));
-	}
+	) {}
 
-	getAllSuperHeroes(): Observable<SuperHero[]> {
-		return this.http.get<SuperHero[]>('./assets/mock/heroes.mock.json').pipe(
-			filter((response) => !!response),
-			tap((response) => this.store.dispatch(HeroesActions.setList({ value: response }))),
-			tap(() => this.store.dispatch(LoadingActions.setIsLoading({ loading: false }))),
-		);
+	getAllSuperHeroes(): void {
+		this.http
+			.get<SuperHero[]>('./assets/mock/heroes.mock.json')
+			.pipe(
+				filter((response) => !!response),
+				tap((response) => {
+					this.superheroes = response;
+					this.store.dispatch(HeroesActions.setList({ value: response }));
+				}),
+				tap(() => this.store.dispatch(LoadingActions.setIsLoading({ loading: false }))),
+			)
+			.subscribe();
 	}
 
 	getSuperHeroById(id: number): Observable<SuperHero | undefined> {
 		return of(this.superheroes.find((hero) => hero.id === id));
 	}
 
-	getSuperHeroesByName(keyword: string): Observable<SuperHero[]> {
-		const filteredHeroes = this.superheroes.filter((hero) => hero.name.toLowerCase().includes(keyword.toLowerCase()));
-		return of(filteredHeroes);
+	getSuperHeroesByName(keyword: string) {
+		const newList: SuperHero[] = this.superheroes.filter((hero) => hero.name.toLowerCase().includes(keyword.toLowerCase()));
+		this.store.dispatch(HeroesActions.setList({ value: newList }));
 	}
 
-	updateSuperHero(hero: SuperHero): Observable<void> {
+	updateSuperHero(hero: SuperHero) {
 		const index = this.superheroes.findIndex((h) => h.id === hero.id);
 		if (index !== -1) {
-			this.store.dispatch(HeroesActions.updateHero({ index, value: hero }));
+			this.superheroes[index] = hero;
+			this.store.dispatch(HeroesActions.setList({ value: this.superheroes }));
 		}
-		return of();
 	}
 
-	deleteSuperHero(id: number): Observable<void> {
+	deleteSuperHero(id: number) {
 		const index = this.superheroes.findIndex((h) => h.id === id);
 		if (index !== -1) {
-			this.store.dispatch(HeroesActions.deleteHero({ index }));
+			this.superheroes.splice(index, 1);
+			this.store.dispatch(HeroesActions.setList({ value: this.superheroes }));
 		}
-		return of();
 	}
 }

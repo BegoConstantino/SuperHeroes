@@ -1,0 +1,117 @@
+@import "vars";
+
+body {
+	font-family: $base-font-family;
+	font-weight: $light;
+	color: $text-dark;
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	background-color: $white;
+	font-size: $base-font-size;
+	line-height: 1.4;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	max-width: $page-max-width;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+// -- columns
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -$spacer;
+	margin-left: -$spacer;
+}
+
+[class*="col-"] {
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	padding-right: $spacer;
+	padding-left: $spacer;
+}
+
+.col-auto {
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+	width: auto;
+	max-width: none;
+}
+
+$grid-columns: 12;
+@for $i from 1 through $grid-columns {
+	.col-#{$i} {
+		flex: 0 0 calc(100% / ($grid-columns / $i));
+		max-width: calc(100% / ($grid-columns / $i));
+	}
+}
+
+@media (min-width: $desktop) {
+	.col-xl {
+		-ms-flex-preferred-size: 0;
+		flex-basis: 0;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		max-width: 100%;
+	}
+	.col-xl-auto {
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
+		width: auto;
+		max-width: none;
+	}
+	@for $i from 1 through $grid-columns {
+		.col-xl-#{$i} {
+			flex: 0 0 calc(100% / ($grid-columns / $i));
+			max-width: calc(100% / ($grid-columns / $i));
+		}
+	}
+}
+
+//vertical
+.align-items-end {
+	align-items: flex-end !important;
+}
+.align-items-start {
+	align-items: flex-start !important;
+}
+.align-items-center {
+	align-items: center !important;
+}
+.align-items-baseline {
+	align-items: baseline;
+}
+//horizontal
+.justify-content-end {
+	justify-content: flex-end !important;
+}
+.justify-content-center {
+	justify-content: center !important;
+}
+.justify-content-between {
+	justify-content: space-between !important;
+}
+
+// spacers
+$space-base: $spacer;
+$space-array: 1, 2, 3, 4;
+@each $space in $space-array {
+	.mt-#{$space} {
+		margin-top: #{$space-base * $space};
+	}
+	.mb-#{$space} {
+		margin-bottom: #{$space-base * $space};
+	}
+	.ml-#{$space} {
+		margin-left: #{$space-base * $space};
+	}
+	.mr-#{$space} {
+		margin-right: #{$space-base * $space};
+	}
+}

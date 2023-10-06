@@ -1,0 +1,37 @@
+// Font
+$base-font-family: 'Comic Neue', sans-serif;
+$base-font-size: 16px;
+
+$regular: 400;
+$light: 300;
+$extraLight: 200;
+
+$fontSize-base: 1rem; //(16px)
+$fontSize-ratio: 0.125;
+
+$font: $fontSize-base;
+$font-p1: $fontSize-base * ($fontSize-ratio + 1); // 18px
+$font-p2: $fontSize-base + ($fontSize-ratio * 2); // 20px
+$font-p3: $fontSize-base + ($fontSize-ratio * 4); // 24px
+$font-p4: $fontSize-base + ($fontSize-ratio * 6); // 28px
+
+$font-m1: $fontSize-base - $fontSize-ratio; // 14px
+$font-m2: $font-m1 - $fontSize-ratio; // 12px
+
+// Colors
+$red: #dc0032;
+$grey: #e6e7e8;
+$white: #ffffff;
+$text-dark: #202020;
+
+// spaces
+$spacer: 10px;
+$spacer-p1: ($spacer * 2);
+$spacer-p2: ($spacer * 3);
+$spacer-p3: ($spacer * 4);
+
+// Utils
+$desktop: 998px;
+$page-max-width: 1220px;
+$header-height: 60px;
+
