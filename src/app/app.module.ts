@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers } from '@core/rxjs/reducer';
+import { HeroesService } from '@core/services/heroes.service';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -19,6 +20,7 @@ import { reducers } from '@core/rxjs/reducer';
 		}),
 	],
 	providers: [
+		HeroesService,
 		{
 			provide: LOCALE_ID,
 			useValue: 'es',

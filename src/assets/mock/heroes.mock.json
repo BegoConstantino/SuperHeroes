@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "name": "Bruce Wayne",
+    "heroName": "Batman",
+    "isActive": true,
+    "powers": ["Detective skills", "Martial arts", "Intelligence"],
+    "level": 10,
+    "creationDate": "2005-05-03T14:30:00Z",
+    "picture": "batman.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Diana Prince",
+    "heroName": "Wonder Woman",
+    "isActive": true,
+    "powers": ["Super strength", "Lasso of Truth", "Flight"],
+    "level": 9,
+    "creationDate": "2003-11-15T12:45:00Z",
+    "picture": "wonderwoman.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Clark Kent",
+    "heroName": "Superman",
+    "isActive": true,
+    "powers": ["Super strength", "Flight", "Heat vision"],
+    "level": 10,
+    "creationDate": "2001-07-21T08:20:00Z",
+    "picture": "superman.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Barry Allen",
+    "heroName": "The Flash",
+    "isActive": true,
+    "powers": ["Super speed", "Time travel", "Accelerated healing"],
+    "level": 8,
+    "creationDate": "2010-02-18T18:10:00Z",
+    "picture": "flash.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Arthur Curry",
+    "heroName": "Aquaman",
+    "isActive": true,
+    "powers": ["Underwater breathing", "Telepathy with marine life", "Superhuman strength"],
+    "level": 7,
+    "creationDate": "2012-09-05T10:05:00Z",
+    "picture": "aquaman.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Hal Jordan",
+    "heroName": "Green Lantern",
+    "isActive": true,
+    "powers": ["Power ring", "Flight", "Energy constructs"],
+    "level": 8,
+    "creationDate": "2009-04-14T16:40:00Z",
+    "picture": "greenlantern.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Peter Parker",
+    "heroName": "Spider-Man",
+    "isActive": true,
+    "powers": ["Wall-crawling", "Spider-sense", "Web-shooters"],
+    "level": 9,
+    "creationDate": "2007-12-30T20:15:00Z",
+    "picture": "spiderman.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Tony Stark",
+    "heroName": "Iron Man",
+    "isActive": true,
+    "powers": ["Powered armor suit", "Genius-level intellect", "Leadership"],
+    "level": 10,
+    "creationDate": "2008-06-10T11:55:00Z",
+    "picture": "ironman.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Natasha Romanoff",
+    "heroName": "Black Widow",
+    "isActive": true,
+    "powers": ["Master martial artist", "Espionage", "Expert marksman"],
+    "level": 9,
+    "creationDate": "2015-03-27T15:20:00Z",
+    "picture": "blackwidow.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Wade Wilson",
+    "heroName": "Deadpool",
+    "isActive": true,
+    "powers": ["Regenerative healing factor", "Expert marksman", "Master martial artist"],
+    "level": 8,
+    "creationDate": "2016-11-08T09:45:00Z",
+    "picture": "deadpool.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Matt Murdock",
+    "heroName": "Daredevil",
+    "isActive": true,
+    "powers": ["Enhanced senses", "Radar sense", "Master martial artist"],
+    "level": 8,
+    "creationDate": "2014-07-19T17:30:00Z",
+    "picture": "daredevil.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Jean Grey",
+    "heroName": "Phoenix",
+    "isActive": true,
+    "powers": ["Telepathy", "Telekinesis", "Energy manipulation"],
+    "level": 10,
+    "creationDate": "2013-10-02T13:10:00Z",
+    "picture": "phoenix.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Scott Summers",
+    "heroName": "Cyclops",
+    "isActive": true,
+    "powers": ["Optic blasts", "Leadership", "Expert tactician"],
+    "level": 8,
+    "creationDate": "2011-12-12T10:25:00Z",
+    "picture": "cyclops.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Logan",
+    "heroName": "Wolverine",
+    "isActive": true,
+    "powers": ["Regenerative healing factor", "Adamantium claws", "Enhanced senses"],
+    "level": 9,
+    "creationDate": "2006-05-08T19:55:00Z",
+    "picture": "wolverine.jpg"
+  },
+  {
+    "id": 15,
+    "name": "T'Challa",
+    "heroName": "Black Panther",
+    "isActive": true,
+    "powers": ["Enhanced strength", "Vibranium suit", "Expert martial artist"],
+    "level": 9,
+    "creationDate": "2017-08-14T14:45:00Z",
+    "picture": "blackpanther.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Carol Danvers",
+    "heroName": "Captain Marvel",
+    "isActive": true,
+    "powers": ["Superhuman strength", "Flight", "Energy projection"],
+    "level": 10,
+    "creationDate": "2018-03-27T16:20:00Z",
+    "picture": "captainmarvel.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Clark Kent",
+    "heroName": "Superboy",
+    "isActive": true,
+    "powers": ["Super strength", "Flight", "Heat vision"],
+    "level": 7,
+    "creationDate": "2019-09-01T09:30:00Z",
+    "picture": "superboy.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Kara Zor-El",
+    "heroName": "Supergirl",
+    "isActive": true,
+    "powers": ["Flight", "Super strength", "Heat vision"],
+    "level": 8,
+    "creationDate": "2020-04-17T12:10:00Z",
+    "picture": "supergirl.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Billy Batson",
+    "heroName": "Shazam",
+    "isActive": true,
+    "powers": ["Wisdom of Solomon", "Strength of Hercules", "Speed of Mercury"],
+    "level": 8,
+    "creationDate": "2021-01-09T11:40:00Z",
+    "picture": "shazam.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Peter Quill",
+    "heroName": "Star-Lord",
+    "isActive": true,
+    "powers": ["Leadership", "Expert marksman", "Strategic planning"],
+    "level": 7,
+    "creationDate": "2022-06-05T18:55:00Z",
+    "picture": "starlord.jpg"
+  }
+]
