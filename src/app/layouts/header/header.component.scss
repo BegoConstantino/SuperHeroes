@@ -5,15 +5,48 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 99;
+	z-index: 2;
+	box-shadow: 0 2px 4px 0 $grey-p1;
+	background-color: white;
+}
+.container {
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
+	height: 100%;
+}
+h1 {
+	font-size: $font-p3;
+	font-weight: $bold;
+}
 
-	box-shadow: 0 2px 4px 0 $grey-p1;
-	background-color: white;
-	h1 {
-		font-size: $font-p3;
-		font-weight: $bold;
+.menu {
+	margin-left: $spacer-p2;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	li {
+		cursor: pointer;
+		position: relative;
+		font-size: $font-p1;
+		padding: 0 $spacer;
+		&:hover {
+			color: $main;
+		}
+		&.active {
+			&:after {
+				content: "";
+				display: block;
+				width: calc(100% - #{$spacer});
+				height: 2px;
+				position: absolute;
+				bottom: 0;
+				left: $spacer;
+				background-color: $main;
+			}
+		}
+		& + li {
+			margin-left: $spacer-p1;
+		}
 	}
 }

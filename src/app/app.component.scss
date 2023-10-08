@@ -7,5 +7,21 @@
 
 main {
 	margin-top: $header-height;
-	padding: $spacer-p1 0;
+	padding: $spacer-p2 0;
+}
+
+.loading-wrapper {
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.286);
+	z-index: 10;
+	top: 0;
+	left: 0;
+	position: fixed;
+	.center {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
 }

@@ -20,17 +20,19 @@ export class HeroesService {
 	) {}
 
 	getAllSuperHeroes(): void {
+		this.store.dispatch(LoadingActions.setIsLoading({ loading: true }));
 		this.http
 			.get<SuperHero[]>('./assets/mock/heroes.mock.json')
 			.pipe(
 				filter((response) => !!response),
 				tap((response) => {
 					this.superheroes = response;
-					this.store.dispatch(HeroesActions.setList({ value: response }));
+					this.dispatchNewData();
 				}),
-				tap(() => this.store.dispatch(LoadingActions.setIsLoading({ loading: false }))),
 			)
-			.subscribe();
+			.subscribe({
+				error: () => this.dispatchNewData(),
+			});
 	}
 
 	public getSuperHeroById(id: number) {
@@ -52,31 +54,35 @@ export class HeroesService {
 	}
 
 	public updateSuperHero(hero: SuperHero) {
+		this.store.dispatch(LoadingActions.setIsLoading({ loading: true }));
 		const index = this.superheroes.findIndex((h) => h.id === hero.id);
 		if (index !== -1) {
 			const superheroes = [...this.superheroes];
 			superheroes[index] = hero;
 			this.superheroes = superheroes;
-			this.store.dispatch(HeroesActions.setList({ value: this.superheroes }));
 		}
+		this.dispatchNewData();
 	}
 
 	public deleteSuperHero(id: number) {
+		this.store.dispatch(LoadingActions.setIsLoading({ loading: true }));
 		const index = this.superheroes.findIndex((h) => h.id === id);
 		if (index !== -1) {
 			this.superheroes = [...this.superheroes.slice(0, index), ...this.superheroes.slice(index + 1)];
-			this.store.dispatch(HeroesActions.setList({ value: this.superheroes }));
 		}
+		this.dispatchNewData();
 	}
 
 	public addSuperHero(values: NewSuperHero) {
+		this.store.dispatch(LoadingActions.setIsLoading({ loading: true }));
 		const newSuperHero: SuperHero = {
 			...values,
 			id: this.getNewId(),
 			creationDate: new Date(),
 		};
 		this.superheroes = [...this.superheroes, newSuperHero];
-		this.store.dispatch(HeroesActions.setList({ value: this.superheroes }));
+		this.dispatchNewData();
+		
 	}
 
 	private getNewId() {
@@ -86,5 +92,12 @@ export class HeroesService {
 		return this.superheroes.reduce((maxId, hero) => {
 			return (hero.id > maxId ? hero.id : maxId) + 1;
 		}, this.superheroes[1].id);
+	}
+
+	private dispatchNewData() {
+		setTimeout(() => {
+			this.store.dispatch(HeroesActions.setList({ value: this.superheroes }));
+			this.store.dispatch(LoadingActions.setIsLoading({ loading: false }));
+		}, 1000);
 	}
 }

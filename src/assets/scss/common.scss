@@ -13,3 +13,26 @@
 		margin: 5px;
 	}
 }
+
+.mdc-circular-progress__circle-clipper {
+	width: 100px !important;
+	height: 100px !important;
+}
+
+.page-title {
+	font-size: $font-p3;
+	font-weight: $bold;
+	color: $main;
+	margin-bottom: $spacer-p2;
+	padding-bottom: $spacer-p1;
+	position: relative;
+	&:after {
+		content: "";
+		display: block;
+		width: 80%;
+		height: 2px;
+		position: absolute;
+		bottom: 0;
+		background-color: $main;
+	}
+}

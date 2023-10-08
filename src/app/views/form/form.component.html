@@ -1,3 +1,4 @@
+<h1 class="page-title">{{ !!hero ? 'Edit this hero' : 'Create a new hero' }}</h1>
 <form [formGroup]="form" (ngSubmit)="saveHero()">
 	<div class="row">
 		<mat-form-field class="col-12 col-xl-5">

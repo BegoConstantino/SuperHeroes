@@ -18,6 +18,10 @@ const routes: Routes = [
 		path: MainRoutes.FORM,
 		component: FormComponent,
 	},
+	{
+		path: MainRoutes.EDIT,
+		component: FormComponent,
+	},
 	{ path: '', redirectTo: MainRoutes.LIST, pathMatch: 'full' },
 	{ path: '**', redirectTo: MainRoutes.LIST, pathMatch: 'full' },
 ];

@@ -41,7 +41,7 @@ export class ListComponent {
 
 	editHero(hero: SuperHero) {
 		this.store.dispatch(HeroesActions.setDetail({ value: hero }));
-		this.router.navigate([MainRoutes.FORM]);
+		this.router.navigate([MainRoutes.EDIT]);
 	}
 
 	goToDetail(id: number) {

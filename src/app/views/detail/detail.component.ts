@@ -45,6 +45,6 @@ export class DetailComponent implements OnInit {
 
 	editHero(hero: SuperHero) {
 		this.store.dispatch(HeroesActions.setDetail({ value: hero }));
-		this.router.navigate([MainRoutes.FORM]);
+		this.router.navigate([MainRoutes.EDIT]);
 	}
 }

@@ -1,7 +1,6 @@
 @import "vars";
 
-.detail-header {
-	position: relative;
+.page-title {
 	padding-bottom: $spacer-p1;
 	margin-bottom: $spacer-p1;
 	h1 {
@@ -10,14 +9,6 @@
 	}
 	h2 {
 		font-size: $font-p2;
-	}
-	&:after {
-		content: "";
-		display: block;
-		width: 80%;
-		height: 2px;
-		position: absolute;
-		bottom: 0;
-		background-color: $main;
+		color: $text-dark
 	}
 }
