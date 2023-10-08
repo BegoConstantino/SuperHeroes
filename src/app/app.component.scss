@@ -1,0 +1,11 @@
+@import "vars";
+:host {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	margin-top: $header-height;
+	padding: $spacer-p1 0;
+}

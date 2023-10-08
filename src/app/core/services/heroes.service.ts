@@ -5,13 +5,14 @@ import { NewSuperHero, SuperHero } from '@core/models';
 import { HeroesActions, LoadingActions } from '@core/rxjs';
 import { Store } from '@ngrx/store';
 import { MainRoutes } from '@shared/constants';
-import { Observable, catchError, filter, map, of, tap, throwError } from 'rxjs';
+import { filter, tap } from 'rxjs';
 
 @Injectable({
 	providedIn: 'root',
 })
 export class HeroesService {
-	superheroes!: SuperHero[];
+	private superheroes: SuperHero[] = [];
+
 	constructor(
 		private readonly store: Store,
 		private readonly http: HttpClient,
@@ -32,15 +33,15 @@ export class HeroesService {
 			.subscribe();
 	}
 
-	getSuperHeroById(id: number) {
-		if(!this.superheroes) {
+	public getSuperHeroById(id: number) {
+		if (!this.superheroes.length) {
 			this.router.navigate([MainRoutes.LIST]);
 			return;
 		}
 		return this.superheroes.find((hero) => hero.id === id);
 	}
 
-	getSuperHeroesByName(keyword: string) {
+	public getSuperHeroesByName(keyword: string) {
 		const newList: SuperHero[] =
 			!keyword || keyword.length < 3
 				? this.superheroes
@@ -50,15 +51,17 @@ export class HeroesService {
 		this.store.dispatch(HeroesActions.setList({ value: newList }));
 	}
 
-	updateSuperHero(hero: SuperHero) {
+	public updateSuperHero(hero: SuperHero) {
 		const index = this.superheroes.findIndex((h) => h.id === hero.id);
 		if (index !== -1) {
-			this.superheroes[index] = hero;
+			const superheroes = [...this.superheroes];
+			superheroes[index] = hero;
+			this.superheroes = superheroes;
 			this.store.dispatch(HeroesActions.setList({ value: this.superheroes }));
 		}
 	}
 
-	deleteSuperHero(id: number) {
+	public deleteSuperHero(id: number) {
 		const index = this.superheroes.findIndex((h) => h.id === id);
 		if (index !== -1) {
 			this.superheroes = [...this.superheroes.slice(0, index), ...this.superheroes.slice(index + 1)];
@@ -66,13 +69,13 @@ export class HeroesService {
 		}
 	}
 
-	addSuperHero(values: NewSuperHero) {
+	public addSuperHero(values: NewSuperHero) {
 		const newSuperHero: SuperHero = {
 			...values,
 			id: this.getNewId(),
 			creationDate: new Date(),
 		};
-		this.superheroes.push(newSuperHero);
+		this.superheroes = [...this.superheroes, newSuperHero];
 		this.store.dispatch(HeroesActions.setList({ value: this.superheroes }));
 	}
 
@@ -81,7 +84,7 @@ export class HeroesService {
 			return 1;
 		}
 		return this.superheroes.reduce((maxId, hero) => {
-			return hero.id > maxId ? hero.id : maxId;
+			return (hero.id > maxId ? hero.id : maxId) + 1;
 		}, this.superheroes[1].id);
 	}
 }

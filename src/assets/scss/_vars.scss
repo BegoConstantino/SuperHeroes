@@ -2,9 +2,9 @@
 $base-font-family: 'Comic Neue', sans-serif;
 $base-font-size: 16px;
 
+$bold: 600;
 $regular: 400;
 $light: 300;
-$extraLight: 200;
 
 $fontSize-base: 1rem; //(16px)
 $fontSize-ratio: 0.125;
@@ -20,7 +20,7 @@ $font-m2: $font-m1 - $fontSize-ratio; // 12px
 
 // Colors
 $main: #3498db;
-$red: #dc0032;
+$grey-p1: #c4c9d2;
 $grey: #e6e7e8;
 $white: #ffffff;
 $text-dark: #202020;

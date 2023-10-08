@@ -1,1 +1,40 @@
-<p>form works!</p>
+<form [formGroup]="form" (ngSubmit)="saveHero()">
+	<div class="row">
+		<mat-form-field class="col-12 col-xl-5">
+			<mat-label>Hero Name</mat-label>
+			<input matInput formControlName="heroName" [errorStateMatcher]="matcher" />
+		</mat-form-field>
+		<mat-form-field class="col-12 col-xl-5">
+			<mat-label>Real Name</mat-label>
+			<input matInput formControlName="name" [errorStateMatcher]="matcher" />
+		</mat-form-field>
+		<mat-form-field class="col-12 col-xl-2">
+			<mat-label>Level</mat-label>
+			<input type="number" matInput formControlName="level" [errorStateMatcher]="matcher" />
+		</mat-form-field>
+
+		<mat-form-field class="col-12 col-xl-6">
+			<mat-label>Powers</mat-label>
+			<mat-chip-grid #chipGrid formControlName="powers">
+				<mat-chip-row *ngFor="let power of powerList" (removed)="removePower(power)">
+					{{ power }}
+					<button matChipRemove>✕</button>
+				</mat-chip-row>
+			</mat-chip-grid>
+			<input placeholder="Add power..." [matChipInputFor]="chipGrid" (matChipInputTokenEnd)="add($event)" />
+		</mat-form-field>
+
+		<mat-form-field class="col-12 col-xl-6">
+			<mat-label>Description</mat-label>
+			<textarea matInput formControlName="description"></textarea>
+		</mat-form-field>
+	</div>
+	<div class="row justify-content-end">
+		<div class="col-auto">
+			<button mat-raised-button (click)="goBack()">Cancel</button>
+		</div>
+		<div class="col-auto">
+			<button type="submit" mat-raised-button>Save</button>
+		</div>
+	</div>
+</form>

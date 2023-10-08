@@ -17,6 +17,7 @@ import { DetailModule } from '@views/detail/detail.module';
 import { FormModule } from '@views/form/form.module';
 import { ListModule } from '@views/list/list.module';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatChipsModule } from '@angular/material/chips';
 
 registerLocaleData(localeEs, 'es');
 
@@ -37,7 +38,8 @@ const InportedModules = [ListModule, DetailModule, FormModule];
 		LayoutsModule,
 		MatProgressSpinnerModule,
 		MatTooltipModule,
-		MatDialogModule
+		MatDialogModule,
+		MatChipsModule
 	],
 	providers: [
 		HeroesService,

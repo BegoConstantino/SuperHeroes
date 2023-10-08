@@ -1,4 +1,4 @@
-@import "vars.scss";
+@import "vars";
 ::ng-deep.mdc-card {
 	height: 100%;
 	.mat-mdc-card-header {
@@ -36,15 +36,17 @@
 }
 
 .chips {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	font-size: $font-m1;
-	margin: 0 -5px;
-	li {
-		border-radius: 16px;
-		background-color: $grey;
-		padding: 2px 10px;
-		margin: 5px;
+	position: relative;
+	overflow: hidden;
+	flex-wrap: nowrap;
+	li:after {
+		content: "";
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 20px;
+		background: linear-gradient(90deg, rgba($white,0) 0%, rgba($white,1) 100%);
 	}
 }

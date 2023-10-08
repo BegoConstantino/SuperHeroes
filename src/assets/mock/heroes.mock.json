@@ -10,7 +10,7 @@
 		],
 		"level": 10,
 		"creationDate": "2005-05-03T14:30:00Z",
-		"description": "Bruce Wayne, también conocido como Batman, es un vigilante de Ciudad Gótica. Utiliza su inteligencia, habilidades de combate y tecnología avanzada para luchar contra el crimen y proteger a los inocentes."
+		"description": "Bruce Wayne, also known as Batman, is a Gotham City vigilante. He uses his intelligence, combat skills, and advanced technology to fight crime and protect the innocent."
 	},
 	{
 		"id": 2,
@@ -23,7 +23,7 @@
 		],
 		"level": 9,
 		"creationDate": "2003-11-15T12:45:00Z",
-		"description": "Wonder Woman, o Diana Prince, es una guerrera amazona con habilidades sobrenaturales. Defiende la paz y la justicia, utilizando su fuerza, valentía y el Lazo de la Verdad para luchar contra el mal."
+		"description": "Wonder Woman, or Diana Prince, is an Amazon warrior with supernatural abilities. She defends peace and justice, using her strength, her bravery, and her Lasso of Truth to fight evil "
 	},
 	{
 		"id": 3,
@@ -36,7 +36,7 @@
 		],
 		"level": 10,
 		"creationDate": "2001-02-28T09:15:00Z",
-		"description": "Clark Kent, alias Superman, es un extraterrestre de Krypton con habilidades asombrosas. Protege la Tierra con su fuerza sobrehumana, velocidad y visión de calor, defendiendo la verdad y la justicia."
+		"description": "Clark Kent, aka Superman, is an alien from Krypton with amazing abilities. He protects Earth with his superhuman strength, speed and heat vision, defending truth and justice."
 	},
 	{
 		"id": 4,
@@ -49,7 +49,7 @@
 		],
 		"level": 8,
 		"creationDate": "2010-08-18T16:20:00Z",
-		"description": "Barry Allen, conocido como The Flash, es el hombre más rápido del mundo. Utiliza su increíble velocidad para proteger Central City y el mundo de amenazas, mientras combate la injusticia y ayuda a los demás."
+		"description": "Barry Allen, known as The Flash, is the fastest man alive. He uses his incredible speed to protect Central City and the world from threats, while fighting injustice and helping others."
 	},
 	{
 		"id": 5,
@@ -62,7 +62,7 @@
 		],
 		"level": 7,
 		"creationDate": "2012-05-09T11:10:00Z",
-		"description": "Arthur Curry, conocido como Aquaman, es el rey de Atlantis y un poderoso guerrero acuático. Controla los océanos y las criaturas marinas, luchando para proteger tanto los océanos como la superficie del mundo."
+		"description": "Arthur Curry, known as Aquaman, is the king of Atlantis and a powerful aquatic warrior. He controls the oceans and sea creatures, fighting to protect both the oceans and the surface of the world."
 	},
 	{
 		"id": 6,
@@ -75,7 +75,7 @@
 		],
 		"level": 8,
 		"creationDate": "2009-03-27T18:55:00Z",
-		"description": "Hal Jordan es un miembro del Cuerpo de Green Lanterns, una fuerza intergaláctica. Con su anillo de poder, puede crear cualquier cosa que imagine, defendiendo el universo contra las amenazas interplanetarias."
+		"description": "Hal Jordan is a member of the Green Lantern Corps, an intergalactic force. With his power ring, he can create anything he imagines, defending the universe against interplanetary threats."
 	},
 	{
 		"id": 7,
@@ -88,7 +88,7 @@
 		],
 		"level": 9,
 		"creationDate": "2006-11-05T13:40:00Z",
-		"description": "Natasha Romanoff, también conocida como Black Widow, es una espía altamente entrenada y una formidable luchadora. Combate el crimen organizado y las amenazas globales utilizando sus habilidades de infiltración y combate."
+		"description": "Natasha Romanoff, also known as Black Widow, is a highly trained spy and formidable fighter. She combats organized crime and global threats using her infiltration and combat skills."
 	},
 	{
 		"id": 8,
@@ -101,7 +101,7 @@
 		],
 		"level": 8,
 		"creationDate": "2007-09-14T10:25:00Z",
-		"description": "Peter Parker, el increíble Spider-Man, obtuvo habilidades arácnidas después de ser mordido por una araña radiactiva. Equilibra su vida como estudiante y superhéroe, defendiendo Nueva York contra los supervillanos mientras protege a los inocentes."
+		"description": "Peter Parker, the incredible Spider-Man, gained spider-like abilities after being bitten by a radioactive spider. He balances his life as a student and superhero, defending New York against supervillains while protecting the innocent."
 	},
 	{
 		"id": 9,
@@ -114,7 +114,7 @@
 		],
 		"level": 7,
 		"creationDate": "2008-06-22T15:15:00Z",
-		"description": "Matt Murdock, alias Daredevil, es un abogado ciego con habilidades sensoriales mejoradas. Utiliza sus sentidos agudizados y habilidades marciales para luchar contra el crimen en Hell's Kitchen, Nueva York, defendiendo a los indefensos y buscando justicia."
+		"description": "Matt Murdock, aka Daredevil, is a blind lawyer with enhanced sensory abilities. He uses his heightened senses and martial skills to fight crime in Hell's Kitchen, New York, defending the defenseless and seeking justice."
 	},
 	{
 		"id": 10,
@@ -127,7 +127,7 @@
 		],
 		"level": 8,
 		"creationDate": "2011-04-09T09:50:00Z",
-		"description": "Wanda Maximoff, conocida como Scarlet Witch, tiene el poder de alterar la realidad y manipular la energía mágica del caos. Aunque ha luchado contra los héroes en el pasado debido a la manipulación, ahora es una valiosa miembro de los Vengadores."
+		"description": "Wanda Maximoff, known as Scarlet Witch, has the power to alter reality and manipulate the magical energy of chaos. Although she has fought against heroes in the past due to manipulation, she is now a valued member of the Avengers "
 	},
 	{
 		"id": 11,
@@ -140,7 +140,7 @@
 		],
 		"level": 9,
 		"creationDate": "2004-02-19T08:30:00Z",
-		"description": "Tony Stark, también conocido como Iron Man, es un ingeniero y filántropo multimillonario. Utiliza su inteligencia y tecnología para crear una armadura de alta tecnología que le otorga fuerza sobrehumana y vuelo. Combate amenazas globales como Iron Man, protegiendo el mundo con su tecnología y valentía."
+		"description": "Tony Stark, also known as Iron Man, is a billionaire engineer and philanthropist. He uses his intelligence and technology to create a high-tech suit of armor that gives him superhuman strength and flight. He combats global threats as Iron Man, protecting the world with its technology and bravery."
 	},
 	{
 		"id": 12,
@@ -153,7 +153,7 @@
 		],
 		"level": 9,
 		"creationDate": "2013-07-11T14:55:00Z",
-		"description": "Carol Danvers, conocida como Captain Marvel, es una piloto de la Fuerza Aérea que obtiene habilidades sobrehumanas después de ser expuesta a tecnología alienígena. Posee una fuerza increíble, vuelo y la capacidad de proyectar energía. Lucha para proteger la Tierra y el universo contra amenazas intergalácticas."
+		"description": "Carol Danvers, known as Captain Marvel, is an Air Force pilot who gains superhuman abilities after being exposed to alien technology. She possesses incredible strength, flight, and the ability to project energy. She fights to protect Earth. and the universe against intergalactic threats."
 	},
 	{
 		"id": 13,
@@ -166,7 +166,7 @@
 		],
 		"level": 9,
 		"creationDate": "2005-12-07T16:10:00Z",
-		"description": "T'Challa, el Black Panther, es el rey de Wakanda y posee habilidades mejoradas por el corazón de hierro. Su traje de vibranio le otorga fuerza sobrehumana, resistencia y agilidad. Protege su nación y el mundo como el Black Panther, luchando contra villanos y defendiendo la paz."
+		"description": "T'Challa, the Black Panther, is the king of Wakanda and possesses abilities enhanced by the heart of iron. His vibranium suit grants him superhuman strength, endurance and agility. He protects his nation and the world as the Black Panther, fighting villains and defending peace."
 	},
 	{
 		"id": 14,
@@ -179,7 +179,7 @@
 		],
 		"level": 9,
 		"creationDate": "2009-08-30T17:45:00Z",
-		"description": "Stephen Strange, también conocido como Doctor Strange, es un hechicero maestro y el Hechicero Supremo del universo Marvel. Utiliza las artes místicas y la magia para proteger el mundo contra amenazas sobrenaturales y dimensionales. Como protector de la realidad, Strange se enfrenta a seres oscuros y poderes mágicos mientras mantiene el equilibrio entre el mundo terrenal y las dimensiones místicas."
+		"description": "Stephen Strange, also known as Doctor Strange, is a master sorcerer and the Sorcerer Supreme of the Marvel universe. He uses mystical arts and magic to protect the world against supernatural and dimensional threats. As the protector of reality, Strange faces dark beings and magical powers while maintaining balance between the underworld and mystical dimensions."
 	},
 	{
 		"id": 15,
@@ -192,7 +192,7 @@
 		],
 		"level": 10,
 		"creationDate": "2001-02-28T09:15:00Z",
-		"description": "Clark Kent, alias Superman, es un extraterrestre de Krypton con habilidades asombrosas. Protege la Tierra con su fuerza sobrehumana, velocidad y visión de calor, defendiendo la verdad y la justicia."
+		"description": "Clark Kent, aka Superman, is an alien from Krypton with amazing abilities. He protects Earth with his superhuman strength, speed and heat vision, defending truth and justice."
 	},
 	{
 		"id": 16,
@@ -205,7 +205,7 @@
 		],
 		"level": 9,
 		"creationDate": "2007-12-18T18:20:00Z",
-		"description": "Jean Grey, conocida como Phoenix, es una mutante con habilidades telepáticas y telequinéticas. Al fusionarse con la Fuerza Fénix, adquiere poderes cósmicos y capacidad de manipular la realidad. Aunque ha luchado con su lado oscuro, Phoenix es una poderosa defensora de la paz y la justicia en el universo Marvel."
+		"description": "Jean Grey, known as Phoenix, is a mutant with telepathic and telekinetic abilities. By fusing with the Phoenix Force, she gains cosmic powers and the ability to manipulate reality. Although she has struggled with her dark side, Phoenix is a powerful defender of peace and justice in the Marvel universe."
 	},
 	{
 		"id": 17,
@@ -218,7 +218,7 @@
 		],
 		"level": 8,
 		"creationDate": "2008-04-05T14:00:00Z",
-		"description": "Remy LeBeau, también conocido como Gambit, es un mutante con la habilidad de cargar objetos con energía cinética explosiva. Utiliza naipes y un bastón como armas, y es un hábil luchador y ladrón. Aunque tiene un pasado oscuro, Gambit ha demostrado ser un valioso miembro de los X-Men, luchando por la paz y la igualdad."
+		"description": "Remy LeBeau, also known as Gambit, is a mutant with the ability to charge objects with explosive kinetic energy. He uses playing cards and a staff as weapons, and is a skilled fighter and thief. Although he has a dark past, Gambit has proven to be a valuable member of the X-Men, fighting for peace and equality."
 	},
 	{
 		"id": 18,
@@ -231,7 +231,7 @@
 		],
 		"level": 8,
 		"creationDate": "2006-01-12T15:10:00Z",
-		"description": "Ororo Munroe, también conocida como Storm, es una mutante con el poder de controlar el clima. Puede generar tormentas, rayos y vientos huracanados. Es una líder y miembro destacado de los X-Men, luchando por la coexistencia pacífica entre mutantes y humanos, mientras protege a los inocentes de amenazas naturales y sobrenaturales."
+		"description": "Ororo Munroe, also known as Storm, is a mutant with the power to control the weather. She can generate storms, lightning, and hurricane-force winds. She is a leader and prominent member of the X-Men, fighting for peaceful coexistence. between mutants and humans, while protecting the innocent from natural and supernatural threats."
 	},
 	{
 		"id": 19,
@@ -244,7 +244,7 @@
 		],
 		"level": 9,
 		"creationDate": "2003-06-28T13:25:00Z",
-		"description": "Logan, también conocido como Wolverine, es un mutante con habilidades regenerativas y garras retráctiles de adamantium. Es un luchador feroz y un experto en combate cuerpo a cuerpo. A pesar de su naturaleza solitaria, Wolverine ha sido un valioso miembro de los X-Men, protegiendo a los mutantes y humanos por igual de amenazas mutantes y supervillanos."
+		"description": "Logan, also known as Wolverine, is a mutant with regenerative abilities and retractable adamantium claws. He is a fierce fighter and an expert in hand-to-hand combat. Despite his reclusive nature, Wolverine has been a valuable member of the X-Men, protecting mutants and humans alike from mutant threats and supervillains."
 	},
 	{
 		"id": 20,
@@ -257,6 +257,6 @@
 		],
 		"level": 8,
 		"creationDate": "2004-09-02T11:35:00Z",
-		"description": "Scott Summers, conocido como Cyclops, emite potentes ráfagas de energía óptica desde sus ojos. Es un líder nato y estratega experto, liderando a los X-Men en la lucha contra las amenazas mutantes y supervillanos. A pesar de su mirada destructora, Cyclops es un héroe dedicado que protege a los mutantes y humanos por igual."
+		"description": "Scott Summers, known as Cyclops, emits powerful blasts of optical energy from his eyes. He is a born leader and expert strategist, leading the X-Men in the fight against mutant threats and supervillains. Despite his destructive gaze, Cyclops is a dedicated hero who protects mutants and humans alike."
 	}
 ]

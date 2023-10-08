@@ -1,0 +1,7 @@
+@import "vars";
+:host {
+	display: block;
+	margin-top: auto;
+	padding: $spacer 0;
+	border-top: 1px solid $grey-p1;
+}

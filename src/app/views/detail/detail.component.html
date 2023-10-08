@@ -1,4 +1,20 @@
-<p>detail works!</p>
 <ng-container *ngIf="hero">
-	<h1>{{ hero.heroName }}</h1>
+	<div class="detail-header">
+		<h1>{{ hero.heroName }}</h1>
+		<h2>{{ hero.name }}</h2>
+	</div>
+
+	<p class="text">{{ hero.description }}</p>
+	<ul class="chips">
+		<li *ngFor="let power of hero.powers">{{ power }}</li>
+	</ul>
+
+	<div class="row justify-content-end">
+		<div class="col-auto">
+			<button mat-raised-button (click)="deleteHero(hero)">Delete</button>
+		</div>
+		<div class="col-auto">
+			<button mat-raised-button (click)="editHero(hero)">Edit</button>
+		</div>
+	</div>
 </ng-container>
