@@ -1,5 +1,5 @@
 <mat-card>
-	<mat-card-header (click)="goToDetail(hero.id)">
+	<mat-card-header (click)="goToDetailEmitter.emit(hero.id)">
 		<mat-card-title>{{ hero.heroName }}</mat-card-title>
 		<mat-card-subtitle>{{ hero.name }}</mat-card-subtitle>
 	</mat-card-header>
@@ -10,7 +10,7 @@
 		</ul>
 	</mat-card-content>
 	<mat-card-actions align="end">
-		<button mat-raised-button (click)="delete(hero.id)">Delete</button>
-		<button mat-raised-button>Edit</button>
+		<button mat-raised-button (click)="deleteHeroEmitter.emit(hero)">Delete</button>
+		<button mat-raised-button (click)="editHeroEmitter.emit(hero)">Edit</button>
 	</mat-card-actions>
 </mat-card>

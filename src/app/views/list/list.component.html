@@ -2,7 +2,12 @@
 <ng-container *ngIf="heroesList$ | async as heroesList">
 	<ul class="row">
 		<li class="col-12 col-xl-4 mb-2" *ngFor="let hero of heroesList.slice(currentPage * pageSize, (currentPage + 1) * pageSize)">
-			<app-card [hero]="hero"></app-card>
+			<app-card
+				[hero]="hero"
+				(deleteHeroEmitter)="deleteHero($event)"
+				(editHeroEmitter)="editHero($event)"
+				(goToDetailEmitter)="goToDetail($event)"
+			></app-card>
 		</li>
 	</ul>
 

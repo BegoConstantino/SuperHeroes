@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DetailModule } from '@views/detail/detail.module';
 import { FormModule } from '@views/form/form.module';
 import { ListModule } from '@views/list/list.module';
+import { MatDialogModule } from '@angular/material/dialog';
 
 registerLocaleData(localeEs, 'es');
 
@@ -36,6 +37,7 @@ const InportedModules = [ListModule, DetailModule, FormModule];
 		LayoutsModule,
 		MatProgressSpinnerModule,
 		MatTooltipModule,
+		MatDialogModule
 	],
 	providers: [
 		HeroesService,
