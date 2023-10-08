@@ -15,6 +15,14 @@
 			bottom: 0;
 			background-color: $main;
 		}
+		&:hover {
+			.mat-mdc-card-title {
+				color: darken($main, 10%);
+			}
+			&:after {
+				background-color: darken($main, 10%);
+			}
+		}
 	}
 	.mat-mdc-card-title {
 		color: $main;
@@ -47,6 +55,6 @@
 		top: 0;
 		height: 100%;
 		width: 20px;
-		background: linear-gradient(90deg, rgba($white,0) 0%, rgba($white,1) 100%);
+		background: linear-gradient(90deg, rgba($white, 0) 0%, rgba($white, 1) 100%);
 	}
 }

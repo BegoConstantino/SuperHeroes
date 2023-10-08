@@ -25,3 +25,8 @@ main {
 		transform: translateX(-50%) translateY(-50%);
 	}
 }
+
+::ng-deep.mdc-circular-progress__circle-clipper {
+	width: 100px !important;
+	height: 100px !important;
+}

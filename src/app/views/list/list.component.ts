@@ -47,4 +47,8 @@ export class ListComponent {
 	goToDetail(id: number) {
 		this.router.navigate([MainRoutes.DETAIL, id]);
 	}
+	
+	createNewHero() {
+		this.router.navigate([MainRoutes.FORM])
+	}
 }
